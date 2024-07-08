@@ -1,4 +1,4 @@
-# Repositório criado para envio de aulas para residente do Serratec
+# Repositório criado para envio de aulas do Serratec
 
 Bem-vindo ao repositório de aulas para residentes do Serratec! Este repositório contém materiais e exemplos de código para ajudar no aprendizado de desenvolvimento web e mobile.
 
