@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula-01</title>
+  </head>
+
+  <style>
+    #foto-perfil {
+      width: 300px;
+      height: 300px;
+      border-radius: 9999px;
+      background-size: cover;
+      opacity: 0.5;
+    }
+
+    #titulo {
+      background-color: dimgrey;
+    }
+
+    #imagemFundo {
+      background: url("./back.jpg") no-repeat;
+      background-size: cover;
+      opacity: 0.5;
+    }
+
+    .itemLista {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 20px;
+      letter-spacing: 5px;
+      color: #f00;
+    }
+
+    .paiLista {
+      width: 350px;
+      border: 10px dashed blue;
+    }
+
+    .infoDD {
+      margin-left: 0px;
+    }
+
+    #idbody {
+      position: absolute;
+      right: 0px;
+    }
+  </style>
+
+  <body id="idbody">
+    <img id="foto-perfil" src="./back.jpg" alt="Imagem de perfil" />
+
+    <h1 id="titulo">Felipe Menegueli</h1>
+
+    <ul class="paiLista">
+      <li class="itemLista">Rua rio de janeiro</li>
+      <li class="itemLista">0</li>
+      <li class="itemLista">Itamarati</li>
+      <li class="itemLista">25400000</li>
+    </ul>
+
+    <ol>
+      <li class="itemLista">Rua rio de janeiro</li>
+      <li class="itemLista">0</li>
+      <li class="itemLista">Itamarati</li>
+      <li class="itemLista">25400000</li>
+    </ol>
+
+    <h2>Formação academica</h2>
+    <h3>Ensino medio completo</h3>
+    <h3>Cursando ensino superior</h3>
+    <h3>Atualmente trabalho na t2m test to market</h3>
+
+    <dl>
+      <dt>Frontend</dt>
+      <dd class="infoDD">HTML</dd>
+      <dd>CSS</dd>
+      <dd>Javascript</dd>
+
+      <dt>Backend</dt>
+      <dd>Java</dd>
+      <dd>Banco de dados</dd>
+      <dd>API</dd>
+    </dl>
+  </body>
+</html>
