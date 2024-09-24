@@ -6,6 +6,7 @@
     <title>Login</title>
     <link rel="shortcut icon" href="../icons/icon-login.svg" type="image/x-icon" />
     <link rel="stylesheet" href="../css/styles.css" />
+    <script src="../js/script.js" defer></script>
   </head>
   <body>
     <div id="container">
@@ -14,12 +15,12 @@
 
         <div id="forms">
           <label class="titleInput">Username</label>
-          <input class="styleInput" type="text" placeholder="Insira seu nome" />
+          <input id="name" class="styleInput" type="text" placeholder="Insira seu nome" />
 
           <label class="titleInput">Password</label>
-          <input class="styleInput" type="password" placeholder="Insira sua senha" />
+          <input id="password" class="styleInput" type="password" placeholder="Insira sua senha" />
           
-          <button id="buttonLogin">Login</button>
+          <button onclick="login()" id="buttonLogin">Login</button>
         </div>
       </div>
     </div>
