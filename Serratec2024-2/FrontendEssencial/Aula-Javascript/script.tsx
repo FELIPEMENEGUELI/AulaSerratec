@@ -1,2 +1,2 @@
-const nome: string = 'felipe'
-var nomes = 'felipe'
+const nome: number = 1
+const nomes = 'felipe'

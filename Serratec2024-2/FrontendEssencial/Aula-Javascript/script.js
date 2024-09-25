@@ -154,3 +154,18 @@
 // }
 
 // console.log(somar(2, 3));
+
+const nameUser = 'PatrickRamosTI'
+fetch(`https://api.github.com/users/${nameUser}`)
+  // -> try
+  .then(response => {
+    if(response.status == 200){
+      return response.json();
+      // console.log('Resposta', response.json())
+    }
+  }).then(dados => {
+    console.log('Dados', dados)
+  })
+
+  .catch(error => console.log(error)) // catch
+  // .catch((error) => { console.log(error) }) // catch
