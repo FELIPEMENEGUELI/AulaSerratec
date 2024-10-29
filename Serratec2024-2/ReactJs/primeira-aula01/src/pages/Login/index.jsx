@@ -1,13 +1,32 @@
+import { Button } from '../../components/Button'
 import { InputField } from '../../components/InputField'
-import {Container} from './style'
+import {Container, Tittle, ContentForms} from './style'
 
 export const Login = () => {
 
+  const handleLogin = () => {
+    alert('Login')
+  }
+
   return (
     <Container>
-      Pagina de login
+      <ContentForms>
+        <Tittle>
+          Login
+        </Tittle>
 
-      <InputField />
+        <InputField 
+          propsplaceholder="Digite seu login"
+          propstype="email"
+        />
+
+        <InputField 
+          propsplaceholder="Digite sua senha" 
+          propstype="password"
+        />
+
+        <Button title="Entrar" handleFunction={handleLogin} />
+      </ContentForms>
     </Container>
   )
 }

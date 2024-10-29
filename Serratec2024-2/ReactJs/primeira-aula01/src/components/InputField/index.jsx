@@ -1,10 +1,11 @@
-import { Container } from "./style"
+import { InputStyle } from "./style"
 
-export const InputField = () => {
+export const InputField = ({propsplaceholder, propstype}) => {
 
   return (
-    <Container>
-      input
-    </Container>
+    <InputStyle
+      placeholder={propsplaceholder}
+      type={propstype}
+     />
   )
 }
