@@ -1,12 +1,13 @@
-import { AulaUseRef } from "./pages/Aula-useRef"
+import { AulaUseMemo } from "./pages/Aula-useMemo"
 
 export const App = () => {
-  return <AulaUseRef />
+  return (
+    <AulaUseMemo />
+  )
 }
 
-
-// useRef
-// useMemo
 // useEffect
 // Imutabilidade
 // Componente de Decisao
+// Rotas
+// Api axios
