@@ -1,15 +1,12 @@
-import { About } from './pages/About'
-import { AulaUseReducer } from './pages/Aula-useReducer'
-import { AulaUseState } from './pages/Aula-useState'
-import { Home } from './pages/Home'
-import { Login } from "./pages/Login"
+import { AulaUseCallback } from "./pages/Aula-useCallback"
 
 export const App = () => {
-  return (
-  //  <Home />
-  // <About />
-  <Login />
-  // <AulaUseReducer />
-  // <AulaUseState />
-  )
+  return <AulaUseCallback />
 }
+
+// useCallback -> usado com React.memo
+// useRef
+// useMemo
+// useEffect
+// Imutabilidade
+// Componente de Decisao
