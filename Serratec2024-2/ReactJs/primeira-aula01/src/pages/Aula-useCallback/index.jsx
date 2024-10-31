@@ -13,7 +13,6 @@ export const AulaUseCallback = () => {
     // setCount(count + 1); // forma literal
   }, []);
 
-
   return (
     <Container>
       <h1>AulaUseCallback</h1>

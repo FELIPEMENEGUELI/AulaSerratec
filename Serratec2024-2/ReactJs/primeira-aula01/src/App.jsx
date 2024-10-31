@@ -1,10 +1,10 @@
-import { AulaUseCallback } from "./pages/Aula-useCallback"
+import { AulaUseRef } from "./pages/Aula-useRef"
 
 export const App = () => {
-  return <AulaUseCallback />
+  return <AulaUseRef />
 }
 
-// useCallback -> usado com React.memo
+
 // useRef
 // useMemo
 // useEffect
