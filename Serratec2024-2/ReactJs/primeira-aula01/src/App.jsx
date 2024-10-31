@@ -1,12 +1,10 @@
-import { AulaComponenteDecisao } from "./pages/Aula-ComponenteDecisao"
+import { AulaImutabilidadeArray } from "./pages/Aula-ImutabilidadeArray"
 
 export const App = () => {
   return (
-    <AulaComponenteDecisao />
+    <AulaImutabilidadeArray />
   )
 }
 
-// Imutabilidade
-// Componente de Decisao
 // useEffect - // Api axios
 // Rotas - useContext
