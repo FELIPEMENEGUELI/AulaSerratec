@@ -21,7 +21,6 @@ export const Home = () => {
     <>
     
     <div className="container">
-      
       <ContainerText nome="Felipe">
         Usuario cadastrado com sucesso
       </ContainerText>
