@@ -1,10 +1,9 @@
-import { AulaImutabilidadeArray } from "./pages/Aula-ImutabilidadeArray"
+import { RequestApi } from "./pages/RequestApi"
 
 export const App = () => {
   return (
-    <AulaImutabilidadeArray />
+    <RequestApi />
   )
 }
 
-// useEffect - // Api axios
 // Rotas - useContext
