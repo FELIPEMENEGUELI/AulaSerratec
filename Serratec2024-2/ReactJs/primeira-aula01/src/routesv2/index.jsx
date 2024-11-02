@@ -1,3 +1,5 @@
+// Rotas react-router-dom v6
+
 import { createBrowserRouter } from 'react-router-dom';
 import { Login } from "../pages/Login";
 import { Home } from "../pages/Home";
