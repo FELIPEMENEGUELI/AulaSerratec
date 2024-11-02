@@ -25,3 +25,6 @@ export const Tittle = styled.h1`
   font-size: 45px;
   color: #000;
 `;
+
+
+// export const Image = styled.img``;
