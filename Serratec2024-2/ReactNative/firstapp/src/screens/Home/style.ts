@@ -12,8 +12,4 @@ export const styles = StyleSheet.create({
     fontSize: 50
   },
 
-  boxForms: {
-    width: "80%"
-  }
-
 });

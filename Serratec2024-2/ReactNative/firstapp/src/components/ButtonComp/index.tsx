@@ -1,11 +1,6 @@
 import { Text, TouchableOpacity } from "react-native";
+import { PropsButton } from "./type";
 import { styles } from "./style";
-
-interface PropsButton {
-  title?: string;
-  propsBackgroundColor?: string;
-  handleFunction: () => void;
-}
 
 export const ButtonComp = ({ title, propsBackgroundColor, handleFunction }: PropsButton) => {
 
