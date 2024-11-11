@@ -2,8 +2,9 @@ import { Alert, Image, ImageBackground, Text, View } from "react-native";
 import { ButtonComp } from "../../components/ButtonComp";
 import AvatarImage from '../../assets/html7.jpeg';
 import BackgroundImage from '../../assets/serratec2.jpg';
-import { styles } from "./style";
 import { ButtonTypes } from "../../components/ButtonTypes";
+import { TextInputField } from "../../components/TextInput";
+import { styles } from "./style";
 
 export const Login = () => {
 
@@ -40,7 +41,16 @@ export const Login = () => {
             propsBackgroundColor="#1B75BB" 
           /> 
         */}
-      
+
+        <TextInputField
+          placeHolder="Digite seu email"
+        />
+
+        <TextInputField
+          placeHolder="Digite sua senha"
+          typeInput={true}
+        />
+
         <ButtonTypes 
           title="Login" 
           handleFunction={handleLogin}
