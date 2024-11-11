@@ -4,6 +4,8 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#999',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 
   estiloTexto: {
@@ -26,12 +28,5 @@ export const styles = StyleSheet.create({
     width: 200,
     height: 200,
     borderRadius: 100,
-  },
-
-  backgroundImage: {
-    flex: 1,
-    width: "100%",
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 });

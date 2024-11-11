@@ -3,10 +3,11 @@ import { ButtonComp } from "../../components/ButtonComp";
 import AvatarImage from '../../assets/html7.jpeg';
 import BackgroundImage from '../../assets/serratec2.jpg';
 import { styles } from "./style";
+import { ButtonTypes } from "../../components/ButtonTypes";
 
 export const Login = () => {
 
-  const hanldeLogin = () => {
+  const handleLogin = () => {
     Alert.alert("Botão para realizar login");
     console.log('Pegando informações')
   }
@@ -17,24 +18,37 @@ export const Login = () => {
 
   return (
     <View style={styles.container}>
-      <ImageBackground
-        style={styles.backgroundImage}
-        resizeMode="cover"
-        source={BackgroundImage}
-        alt="Imagem de fundo"
-      >
-        <View style={styles.boxForms}>
-          <Image style={styles.avatarImage} source={AvatarImage} alt="Avatar de perfil" />
-          <Text style={styles.estiloTexto}>
-            Login
-          </Text>
+      <View style={styles.boxForms}>
+        <Image style={styles.avatarImage} source={AvatarImage} alt="Avatar de perfil" />
 
-          <ButtonComp handleFunction={hanldeLogin} title="Login" propsBackgroundColor="#1B75BB" />
-          <ButtonComp handleFunction={handleRegister} title="Cadastrar" propsBackgroundColor="#1B75BB" />
-        </View>
+        <Text style={styles.estiloTexto}>
+          Login
+        </Text>
 
-        {/* <Button title="Botão native" color="red" /> */}
-      </ImageBackground>
+        {/* 
+          <ButtonComp 
+            handleFunction={hanldeLogin} 
+            title="Login" 
+            propsBackgroundColor="#1B75BB" 
+          /> 
+        */}
+        
+        {/* 
+          <ButtonComp 
+            handleFunction={handleRegister} 
+            title="Cadastrar" 
+            propsBackgroundColor="#1B75BB" 
+          /> 
+        */}
+      
+        <ButtonTypes 
+          title="Login" 
+          handleFunction={handleLogin}
+          propsBackgroundColor="#1B75BB"
+        />
+      </View>
+
+      {/* <Button title="Botão native" color="red" /> */}
     </View>
   )
 }
