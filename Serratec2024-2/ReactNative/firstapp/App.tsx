@@ -1,7 +1,7 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { Login } from './src/screens/Login';
-import { Home } from './src/screens/Home';
+import { HomeV5 } from './src/screens/HomeV5';
 
 export default function App() {
 
@@ -9,7 +9,7 @@ export default function App() {
     <>
       <StatusBar style="auto" />
       {/* <Login /> */}
-      <Home />
+      <HomeV5 />
     </>
   );
 }
