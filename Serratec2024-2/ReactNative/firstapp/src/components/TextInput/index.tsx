@@ -4,17 +4,25 @@ import { styles } from './style';
 interface PropsInput {
   placeHolder: string;
   typeInput?: boolean;
+  valueInput: string;
+  hadleFunctionInput: (value: string) => void;
 }
 
-export const TextInputField = ({placeHolder, typeInput}: PropsInput) => {
+export const TextInputField = ({ 
+  placeHolder, 
+  typeInput, 
+  valueInput,
+  hadleFunctionInput
+}: PropsInput) => {
 
   return (
-    <TextInput 
+    <TextInput
+      onChangeText={hadleFunctionInput}
       style={styles.input}
       placeholder={placeHolder}
       placeholderTextColor="#000"
       secureTextEntry={typeInput}
-      // value=""
+      value={valueInput}
     />
   )
 }

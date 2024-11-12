@@ -1,64 +1,84 @@
-import { Alert, Image, ImageBackground, Text, View } from "react-native";
-import { ButtonComp } from "../../components/ButtonComp";
-import AvatarImage from '../../assets/html7.jpeg';
-import BackgroundImage from '../../assets/serratec2.jpg';
+import { useState } from "react";
+import { Alert, Image, ImageBackground, Keyboard, TouchableWithoutFeedback, View } from "react-native";
+import BackgroundImage from '../../assets/backgroundimg.jpg';
+import ImageSerratec from '../../assets/serratec2.jpg';
 import { ButtonTypes } from "../../components/ButtonTypes";
 import { TextInputField } from "../../components/TextInput";
 import { styles } from "./style";
 
 export const Login = () => {
 
+  const [email, setEmail] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
+
   const handleLogin = () => {
     Alert.alert("Botão para realizar login");
-    console.log('Pegando informações')
+    console.log('Pegando informações', email, password);
   }
 
-  const handleRegister = () => {
-    Alert.alert("Botão cadastrar");
+  const handlePassword = (value: string) => {
+    setPassword(value);
+  }
+
+  const handleEmail = (value: string) => {
+    setEmail(value);
   }
 
   return (
-    <View style={styles.container}>
-      <View style={styles.boxForms}>
-        <Image style={styles.avatarImage} source={AvatarImage} alt="Avatar de perfil" />
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+      <View style={styles.container}>
+        <ImageBackground
+          style={styles.backgroundImage} 
+          resizeMode="cover" 
+          source={BackgroundImage}
+        >
+          <View style={styles.boxForms}>
 
-        <Text style={styles.estiloTexto}>
-          Login
-        </Text>
+            {/* <Text style={styles.estiloTexto}>
+              Login Serratec
+            </Text> */}
 
-        {/* 
-          <ButtonComp 
-            handleFunction={hanldeLogin} 
-            title="Login" 
-            propsBackgroundColor="#1B75BB" 
-          /> 
-        */}
-        
-        {/* 
-          <ButtonComp 
-            handleFunction={handleRegister} 
-            title="Cadastrar" 
-            propsBackgroundColor="#1B75BB" 
-          /> 
-        */}
+            <Image style={styles.avatarImage} source={ImageSerratec} alt="Avatar de perfil" />
 
-        <TextInputField
-          placeHolder="Digite seu email"
-        />
+            {/* 
+              <ButtonComp 
+                handleFunction={hanldeLogin} 
+                title="Login" 
+                propsBackgroundColor="#1B75BB" 
+              /> 
+            */}
+            
+            {/* 
+              <ButtonComp 
+                handleFunction={handleRegister} 
+                title="Cadastrar" 
+                propsBackgroundColor="#1B75BB" 
+              /> 
+            */}
 
-        <TextInputField
-          placeHolder="Digite sua senha"
-          typeInput={true}
-        />
+            <View style={{ marginTop: 50 }} />
 
-        <ButtonTypes 
-          title="Login" 
-          handleFunction={handleLogin}
-          propsBackgroundColor="#1B75BB"
-        />
+            <TextInputField
+              placeHolder="Digite seu email"
+              valueInput={email}
+              hadleFunctionInput={handleEmail}
+            />
+
+            <TextInputField
+              placeHolder="Digite sua senha"
+              valueInput={password}
+              hadleFunctionInput={handlePassword}
+              typeInput={true}
+            />
+
+            <ButtonTypes 
+              title="Login" 
+              handleFunction={handleLogin}
+              propsBackgroundColor="#1B75BB"
+            />
+          </View>
+        </ImageBackground>
       </View>
-
-      {/* <Button title="Botão native" color="red" /> */}
-    </View>
+    </TouchableWithoutFeedback>
   )
 }

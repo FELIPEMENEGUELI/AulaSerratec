@@ -3,7 +3,11 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#999',
+  },
+
+  backgroundImage: {
+    flex: 1,
+    width: "100%",
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -17,7 +21,7 @@ export const styles = StyleSheet.create({
     width: "90%",
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: "#99999999",
+    backgroundColor: "#1B75BB98",
     paddingVertical: 20,
     paddingHorizontal: 20,
     gap: 10,
@@ -25,8 +29,8 @@ export const styles = StyleSheet.create({
   },
 
   avatarImage: {
-    width: 200,
-    height: 200,
-    borderRadius: 100,
+    width: '100%',
+    height: 150,
+    borderRadius: 10,
   },
 });
