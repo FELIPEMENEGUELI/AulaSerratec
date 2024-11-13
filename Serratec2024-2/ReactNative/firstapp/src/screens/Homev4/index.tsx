@@ -1,6 +1,7 @@
 import { FlatList, Image, ImageSourcePropType, Text, View } from "react-native";
 import { DataAPI } from "../../Mock/Data";
 import { styles } from "./style";
+import { useEffect } from "react";
 
 export const HomeV4 = () => {
 
@@ -37,7 +38,7 @@ const CardApi = ({ listaFilmes }: ArrayPropsApi) => {
       keyExtractor={item => item.id.toString()}
       renderItem={({ item }) =>
         <View style={styles.container}>
-          <View style={styles.boxCard}>
+          <View style={styles.boxCard} key={item.id}>
             <View style={styles.boxInfo}>
               <Text style={styles.name}>{item.name}</Text>
               <Text style={styles.age}>{item.age}</Text>

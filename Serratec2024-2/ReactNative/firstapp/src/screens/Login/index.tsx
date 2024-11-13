@@ -62,6 +62,7 @@ export const Login = () => {
               placeHolder="Digite seu email"
               valueInput={email}
               hadleFunctionInput={handleEmail}
+              typeIcon="person"
             />
 
             <TextInputField
@@ -69,6 +70,7 @@ export const Login = () => {
               valueInput={password}
               hadleFunctionInput={handlePassword}
               typeInput={true}
+              typeIcon="password"
             />
 
             <ButtonTypes 
