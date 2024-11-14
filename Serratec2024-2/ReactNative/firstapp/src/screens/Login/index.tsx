@@ -6,18 +6,19 @@ import ImageSerratec from '../../assets/serratec2.jpg';
 import { ButtonTypes } from "../../components/ButtonTypes";
 import { TextInputField } from "../../components/TextInput";
 import { styles } from "./style";
+import { useAuth } from "../../hooks/useAuth";
 
 export const Login = () => {
 
   const batata = useNavigation();
 
-  const [email, setEmail] = useState<string>('');
+  const { email, setEmail } = useAuth();
   const [password, setPassword] = useState<string>('');
 
   const handleLogin = () => {
     // Alert.alert("Botão para realizar login");
     // console.log('Pegando informações', email, password);
-    batata.navigate('StackHome')
+    batata.navigate('StackHome', { name: "Home" })
   }
 
   const handlePassword = (value: string) => {

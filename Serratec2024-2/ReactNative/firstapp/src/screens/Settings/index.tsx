@@ -7,7 +7,7 @@ export const Settings = () => {
   const navigation = useNavigation();
 
   const navigateToLogin = () => {
-    navigation.navigate("Login");
+    navigation.navigate("StackLogin", { name: "Login" });
   };
 
   return (

@@ -7,7 +7,7 @@ export const Home = () => {
   const navigation = useNavigation();
 
   const navigateToProfile = () => {
-    navigation.navigate("Profile");
+    navigation.navigate("TabsProfile");
   };
 
   return (

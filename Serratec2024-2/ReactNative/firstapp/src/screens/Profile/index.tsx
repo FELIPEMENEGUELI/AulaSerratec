@@ -7,7 +7,7 @@ export const Profile = () => {
   const navigation = useNavigation();
 
   const navigateToSettings = () => {
-    navigation.navigate("Settings");
+    navigation.navigate("TabsSettings");
   };
 
   return (
