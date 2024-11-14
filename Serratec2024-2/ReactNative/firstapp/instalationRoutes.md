@@ -1,4 +1,4 @@
-## Instalação das rotas React NAvigation
+## Instalação das rotas React Navigation
  - Recomendado instalar a versão 6, pois a 7 apresenta conflitos de dependências.
 
 ```

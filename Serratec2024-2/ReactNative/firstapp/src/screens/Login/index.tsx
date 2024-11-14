@@ -1,5 +1,6 @@
+import { useNavigation } from "@react-navigation/native";
 import { useState } from "react";
-import { Alert, Image, ImageBackground, Keyboard, TouchableWithoutFeedback, View } from "react-native";
+import { Image, ImageBackground, Keyboard, TouchableWithoutFeedback, View } from "react-native";
 import BackgroundImage from '../../assets/backgroundimg.jpg';
 import ImageSerratec from '../../assets/serratec2.jpg';
 import { ButtonTypes } from "../../components/ButtonTypes";
@@ -8,12 +9,15 @@ import { styles } from "./style";
 
 export const Login = () => {
 
+  const batata = useNavigation();
+
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
 
   const handleLogin = () => {
-    Alert.alert("Botão para realizar login");
-    console.log('Pegando informações', email, password);
+    // Alert.alert("Botão para realizar login");
+    // console.log('Pegando informações', email, password);
+    batata.navigate('StackHome')
   }
 
   const handlePassword = (value: string) => {
