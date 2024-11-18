@@ -21,3 +21,8 @@
   - Estilo de navegação: Bottoms tabs (instagram)
    * npm install @react-navigation/bottom-tabs@^6.x
 ```
+
+```
+  - Instalação do Async Storage para salvar informações na memória do celular
+   * npm i @react-native-async-storage/async-storage
+```

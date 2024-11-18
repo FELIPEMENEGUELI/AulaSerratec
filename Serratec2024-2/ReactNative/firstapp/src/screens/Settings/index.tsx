@@ -1,13 +1,13 @@
 import { Text, TouchableOpacity, View } from "react-native";
+import { useAuth } from "../../hooks/useAuth";
 import { styles } from "./style";
-import { useNavigation } from "@react-navigation/native";
 
 export const Settings = () => {
 
-  const navigation = useNavigation();
+  const { handleLogOut } = useAuth();
 
   const navigateToLogin = () => {
-    navigation.navigate("StackLogin", { name: "Login" });
+    handleLogOut();
   };
 
   return (
