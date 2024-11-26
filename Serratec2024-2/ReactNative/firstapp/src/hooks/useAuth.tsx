@@ -5,12 +5,16 @@ import { useContext, createContext, useState, useEffect } from 'react'
 type PropsContext = {
   email: string;
   setEmail: (value: string) => void;
+  setTabChat: (value: boolean) => void;
   checkAuthentication: (email: string) => void;
   handleLogOut: () => void;
   isLoading: boolean;
+  tabChat: boolean;
 }
 
 const AuthContext = createContext<PropsContext>({
+  tabChat: false,
+  setTabChat: () => { },
   email: '',
   setEmail: () => { },
   checkAuthentication: () => { },
@@ -24,6 +28,7 @@ export const AuthProvider = ({ children }: any) => {
 
   const [email, setEmail] = useState<string>('');
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [tabChat, setTabChat] = useState<boolean>(false);
 
   const checkAuthentication = (email: string) => {
     setIsLoading(true);
@@ -76,7 +81,9 @@ export const AuthProvider = ({ children }: any) => {
       setEmail,
       checkAuthentication,
       handleLogOut,
-      isLoading
+      isLoading,
+      tabChat, 
+      setTabChat
     }}>
       {children}
     </AuthContext.Provider>

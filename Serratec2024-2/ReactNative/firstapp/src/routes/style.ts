@@ -5,6 +5,7 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     marginTop: 10,
+    width: 100,
   },
 
   textTabRoute: {
