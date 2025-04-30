@@ -57,30 +57,43 @@
     position: absolute;
   }
 
-  #divVermelha {
-    background-color: red;
+  .tamanhoDiv {
     width: 30px;
     height: 30px;
   }
 
+  #divVermelha {
+    background-color: red;
+  }
+
   #divVerdeSemMargin {
     background-color: green;
-    width: 30px;
-    height: 30px;
+  }
+
+  #divVioleta {
+    background-color: violet;
+  }
+
+  #divAmarelo {
+    background-color: yellow;
+  }
+
+  #divAzulSemPadding {
+    background-color: blue;
   }
 
 </style>
 <body>
   <!-- <h1>Aula 03</h1> -->
   
-  <!-- <div>Esta div é a verde</div> -->
-  <!-- <div>Esta div é a azul</div> -->
+  <!-- <div id="divVerde">Esta div é a verde</div> -->
+  <!-- <div id="divAzul">Esta div é a azul</div> -->
 
-  <div id="divVerdeSemMargin"></div>
-  <div id="divVermelha"></div>
-  <div id="divVioleta"></div>
-  <div id="divAmarelo"></div>
-  <div id="divAzulSemPadding"></div>
+  <div id="divVerdeSemMargin" class="tamanhoDiv"></div>
+  <div id="divVermelha" class="tamanhoDiv"></div>
+  <div id="divVioleta" class="tamanhoDiv"></div>
+  <div id="divAmarelo" class="tamanhoDiv"></div>
+  <div id="divAzulSemPadding" class="tamanhoDiv"></div>
     
 </body>
 </html>
