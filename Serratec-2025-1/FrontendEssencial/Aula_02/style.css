@@ -1,0 +1,16 @@
+/* Usando com ID seletor */
+#tituloH2 {
+  color: var(--cor-vermelha);
+}
+
+/* Usando com class seletor */
+.formacao {
+  color: var(--cor-verde);
+  font-family: "Assistant", sans-serif;
+  font-style: normal;
+}
+
+/* Usando com proprio seletor */
+h2 {
+  color: blueviolet;
+}
