@@ -58,28 +58,41 @@
   }
 
   .tamanhoDiv {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
   }
 
   #divVermelha {
     background-color: red;
+    /* top: calc(50% - 25px); */
+    /* left: calc(50% - 25px); */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   #divVerdeSemMargin {
     background-color: green;
+    top: 0;
+    left: 0;
   }
 
   #divVioleta {
     background-color: violet;
+    left: 0;
+    bottom: 0;
   }
 
   #divAmarelo {
     background-color: yellow;
+    right: 0;
+    bottom: 0;
   }
 
   #divAzulSemPadding {
     background-color: blue;
+    top: 0;
+    right: 0;
   }
 
 </style>
