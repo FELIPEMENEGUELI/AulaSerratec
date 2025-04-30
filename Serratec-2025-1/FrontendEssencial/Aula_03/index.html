@@ -64,11 +64,11 @@
 
   #divVermelha {
     background-color: red;
-    /* top: calc(50% - 25px); */
-    /* left: calc(50% - 25px); */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: calc(50% - 25px);
+    left: calc(50% - 25px);
+    /* top: 50%; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
   }
 
   #divVerdeSemMargin {
@@ -95,6 +95,57 @@
     right: 0;
   }
 
+  img {
+    width: 25%;
+    height: 25%;
+    /* border-radius: 9999px; */
+    object-fit: cover;
+  }
+
+  @media(min-width: 768px) {
+    img {
+      width: 50%;
+      height: 50%;
+    }
+  }
+
+  @media(min-width: 1200px) {
+    img {
+      width: 175px;
+      height: 175px;
+    }
+  }
+
+  a:active {
+    background-color: "red";
+  }
+
+  p {
+      line-height: 13px; 
+      letter-spacing: 10px; 
+      word-spacing: 15px; 
+      text-indent: 3px; 
+    }
+
+    #divGradient {
+      background: linear-gradient(to right, red 40%, green, blue);
+      height: 50px;
+      width: 50px;
+    }
+
+    button {
+      box-shadow: 1px 1px 4px black;
+      border: 1px solid black;
+      border-style: solid;
+      border-color: blueviolet;
+      /* border-bottom: 1px; */
+      border-bottom-color: yellowgreen;
+      border-radius: 8px;
+      color: white;
+      /* background: #00000090; */
+      /* background: rgb(0, 0, 0, 0,9); */
+    }
+
 </style>
 <body>
   <!-- <h1>Aula 03</h1> -->
@@ -102,11 +153,25 @@
   <!-- <div id="divVerde">Esta div é a verde</div> -->
   <!-- <div id="divAzul">Esta div é a azul</div> -->
 
-  <div id="divVerdeSemMargin" class="tamanhoDiv"></div>
-  <div id="divVermelha" class="tamanhoDiv"></div>
-  <div id="divVioleta" class="tamanhoDiv"></div>
-  <div id="divAmarelo" class="tamanhoDiv"></div>
-  <div id="divAzulSemPadding" class="tamanhoDiv"></div>
+  <!-- <div id="divVerdeSemMargin" class="tamanhoDiv"></div> -->
+  <!-- <div id="divVermelha" class="tamanhoDiv"></div> -->
+  <!-- <div id="divVioleta" class="tamanhoDiv"></div> -->
+  <!-- <div id="divAmarelo" class="tamanhoDiv"></div> -->
+  <!-- <div id="divAzulSemPadding" class="tamanhoDiv"></div> -->
+
+  <!-- <img 
+    id="profile" 
+    src="../Aula_01/Login/background.jpg" 
+    alt="Foto perfil"
+  /> -->
+
+  <!-- <a href="">Link</a> -->
+
+  <!-- <p>Parque tecnologico</p> -->
+
+  <!-- <div id="divGradient"></div> -->
+
+  <button>Clique aqui</button>
     
 </body>
 </html>
