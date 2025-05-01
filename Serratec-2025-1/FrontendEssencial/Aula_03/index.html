@@ -10,6 +10,7 @@
   body {
     margin: 0;
     padding: 0;
+    /* background-image: url("../Aula_01/Login/background.jpg"); */
   }
 
   /* Valores margin, padding, border-radius */
@@ -96,25 +97,26 @@
   }
 
   img {
-    width: 25%;
-    height: 25%;
+    width: 150px;
+    height: 150px;
     /* border-radius: 9999px; */
-    object-fit: cover;
+    /* object-fit: cover; */
+    opacity: 1;
   }
 
-  @media(min-width: 768px) {
-    img {
-      width: 50%;
-      height: 50%;
+    /* @media(min-width: 768px) {
+      img {
+        width: 50%;
+        height: 50%;
+      }
     }
-  }
 
-  @media(min-width: 1200px) {
-    img {
-      width: 175px;
-      height: 175px;
-    }
-  }
+    @media(min-width: 1200px) {
+      img {
+        width: 275px;
+        height: 275px;
+      }
+    } */
 
   a:active {
     background-color: "red";
@@ -133,7 +135,7 @@
       width: 50px;
     }
 
-    button {
+    buttons {
       box-shadow: 1px 1px 4px black;
       border: 1px solid black;
       border-style: solid;
@@ -144,6 +146,11 @@
       color: white;
       /* background: #00000090; */
       /* background: rgb(0, 0, 0, 0,9); */
+    }
+
+    #idButton {
+      background-color: red;
+      width: 10rem;
     }
 
 </style>
@@ -171,7 +178,9 @@
 
   <!-- <div id="divGradient"></div> -->
 
-  <button>Clique aqui</button>
+  <!-- <button>Clique aqui</button> -->
+
+  <button id="idButton">Clique aqui</button>
     
 </body>
 </html>

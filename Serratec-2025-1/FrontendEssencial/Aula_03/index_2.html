@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex-box</title>
+</head>
+
+<style>
+
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #divPai {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: gray;
+    /* padding: 10px; */
+
+    /* Uso do wrap para queb de linha */
+    /* flex-wrap: wrap; */
+    
+    /* Por padrão ja vem linha */
+    /* flex-direction: row; */
+
+    /* Alinhamento horizontal */
+    /* justify-content: flex-end; */
+
+    /* Alinhamento vertical */
+    /* align-items: flex-end; */
+    
+    /* Alterando as direções */
+
+    /* Alterando para posições em colunas */
+    /* flex-direction: column; */
+
+    /* Alinhamento horizontal, se torna vertical */
+    /* justify-content: flex-end; */
+
+    /* Alinhamento vertical, se torna horizontal */
+    /* align-items: flex-end; */
+
+    /* Distribui os elementos dentro do espaço disponivel */
+    /* justify-content: space-between; */
+
+    /* Distribui com proporções para cada elemento */
+    /* justify-content: space-around; */
+
+    /* Distribui com as mesmas proporções */
+    /* justify-content: space-evenly; */
+
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  button {
+    width: 75px;
+    height: 25px;
+  }
+
+  #idGE {
+    /* Forma de posicionar somente um elemento */
+    align-self: flex-start;
+  }
+
+</style>
+<body>
+
+  <div id="divPai">
+    <button id="idGE">GE</button>
+    <button>Noticias</button>
+    <button>Novelas</button>
+    <!-- <button>BBB</button> -->
+    <!-- <button>Globo</button> -->
+    <!-- <button>Agro</button> -->
+    <!-- <button>AE</button>  -->
+  </div>
+
+</body>
+</html>
