@@ -1,0 +1,63 @@
+header {
+  background-color: var(--cor-2);
+  border: 0.7px solid var(--cor-1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 20vh;
+  margin: 25px 20px;
+  border-radius: 8px;
+  padding: 0 30px;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+  background-color: transparent;
+}
+
+.classButton {
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+}
+
+.classButton:hover {
+  cursor: pointer;
+}
+
+#sectionSearch {
+  display: flex;
+  gap: 30px;
+  background-color: transparent;
+}
+
+input {
+  height: 30px;
+  background-color: var(--cor-1);
+  border: 0.7px solid var(--cor-3);
+  font-size: 18px;
+  border-radius: 8px;
+  padding: 5px 10px;
+}
+
+input:focus {
+  outline-color: var(--cor-4);
+  box-shadow: 1px 1px 10px var(--cor-4);
+}
+
+#buttonSearch {
+  border: 0.7px solid var(--cor-5);
+  background-color: var(--cor-1);
+  color: var(--cor-5);
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+#buttonSearch:hover {
+  background-color: var(--cor-5);
+  color: var(--cor-1);
+  cursor: pointer;
+}

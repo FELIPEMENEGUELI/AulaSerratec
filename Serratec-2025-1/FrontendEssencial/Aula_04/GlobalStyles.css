@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: gray;
+  --cor-1: #fff;
+  --cor-2: #F8F9FA;
+  --cor-3: #ddd;
+  --cor-4: #32a1ce;
+  --cor-5: #7ca87c;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
