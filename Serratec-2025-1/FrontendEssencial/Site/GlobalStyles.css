@@ -1,0 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #ddd;
+  --primary-color: #1B75BB;
+  --primary-color-white: #FFF;
+  --primary-color-black: #000;
+}
