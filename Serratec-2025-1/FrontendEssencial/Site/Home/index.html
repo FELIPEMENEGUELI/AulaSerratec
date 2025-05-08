@@ -3,20 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-    <link rel="stylesheet" href="../GlobalStyles.css" />
-    <link rel="stylesheet" href="./style.css" />
+    <title>Display block</title>
   </head>
+  <!-- 
+  display         Quebra linha?   Aceita width/height?  Alinhamento com os outros?
+  block           Sim             Sim                   Não
+  inline          Não             Não                   Sim            
+  inline-block    Não             Sim                   Sim           
+  -->
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    .bloqueado {
+      background-color: green;
+    }
+
+    .naobloqueado {
+      background-color: blue;
+    }
+
+  </style>
   <body>
-    <div class="idcontainer">
-      <button 
-        type="button" 
-        class="buttoncustomer">
-        Buscar
-      </button>
-      <button class="buttoncustomer">Editar</button>
-      <button class="buttoncustomer">Cadastrar</button>
-      <button class="buttoncustomer">Deletar</button>
-    </div>
+    <span class="bloqueado">primeiro texto</span>
+    <p class="naobloqueado">segundo texto</p>
+    <div class="naobloqueado">terceiro texto</div>
   </body>
 </html>

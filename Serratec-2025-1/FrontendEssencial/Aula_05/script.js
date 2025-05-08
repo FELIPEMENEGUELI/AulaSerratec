@@ -258,9 +258,9 @@ async function buscarDados() {
   const url = "https://66f4ad8277b5e889709a277e.mockapi.io/api/v1/users"
   
   try {
-      setTimeout(async () => {
-        const resposta = await fetch(url)
-        const dados = await resposta.json()
+            setTimeout(async () => {
+    const resposta = await fetch(url)
+            const dados = await resposta.json()
         console.log("Exibindo", dados)
         console.log('Carregou')
       }, 2000)
@@ -299,7 +299,7 @@ const usandoOServico = async () => {
 // marlos nome branch=> marlos-home
 // felipe nome branch => felipe-deletarUser
 // iara nome branch => iara-editar-user
-// karen lessa nome branch => karen-criar
+// Joao nome branch => joao-criar
 // julya nome branch => julya-login
 
 // marlos criou a pagina home dele, enquanto isso, os demais estao criando suas paginas
