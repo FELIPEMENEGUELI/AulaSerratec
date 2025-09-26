@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula - 03</title>
+</head>
+<style>
+    /* Display inline */
+    /* Elementos ficam na mesma linha */
+    /* Nao permitem modificação de largura e altura */
+
+
+    /* Display inline-block */
+    /* Funciona como inline */
+    /* Permite definir altura e largura */
+
+    /* Display block */
+    /* Ocupa toda a largura disponivel */
+
+    .classespaninline {
+        display: inline;
+        background-color: red;
+        height: 200px;
+        width: 20px;
+    }
+
+    .classespaninlineblock {
+        display: inline-block;
+        background-color: blue;
+        width: 220px;
+        height: 20px;
+    }
+
+    .classespanblock {
+        background-color: green;
+        display: block;
+        width: 200px;
+        height: 2px;
+    }
+
+
+    /* display         altura/largura      quebra de linha */
+    /* inline          nao                 nao */
+    /* inline-block    sim                 nao */
+    /* block           sim                 sim */
+
+    div > p {
+        color: green;
+    }
+
+    p + span {
+        color: red;
+    }
+
+    h4 ~ h5 {
+        color: red;
+    }
+
+    h6:not(#remover) {
+        color:blueviolet
+    }
+
+    a:link {
+        color: red
+    }
+
+    button {
+        background-color: white;
+        border-radius: 6px;
+        border: 1px dashed darkblue;
+        padding: 5px 10px;
+        color: darkblue;
+    }
+
+    button:hover {
+        cursor: pointer;
+        background-color: darkblue;
+        color: white;
+        border: 2px solid red;
+    }
+
+
+    #transition {
+        width: 50px;
+        height: 50px;
+        background-color: red;
+        transition-property: width height;
+        transition-duration: 2s;
+        transition-timing-function: ease-in-out;
+        transition-delay: 1s;
+    }
+
+    #transition:hover {
+        width: 100px;
+        height: 100px;
+    }
+
+    #transformacao {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    #transformacao:hover {
+        transform: translateX(50px);
+    }
+
+    #rotate {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(198, 9, 72);
+        transition: transform 0.5s ease-in-out;
+    }
+
+    #rotate:hover {
+        transform: rotate(45deg);
+    }
+
+    #scale {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(13, 184, 207);
+        transition: transform 0.5s ease-in-out;
+    }
+
+    #scale:hover {
+        transform: scale(1.5);
+    }
+
+    #skew {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(24, 208, 21);
+        transition: transform 0.5s ease-in-out;
+    }
+
+    #skew:hover {
+        transform: skew(20deg, 10deg);
+    }
+
+</style>
+<body>
+    <h1 class="classespaninline">Span inline</h1>
+    <h1 class="classespaninline">Span inline</h1>
+    
+    <h1 class="classespaninlineblock">Span inline-block</h1>
+    <h1 class="classespaninlineblock">Span inline-block</h1>
+    
+    <span class="classespanblock">Span block</span>
+
+    <div>
+        <p>titulo verde</p>
+        <nav>
+            <p>nao e verde</p>
+        </nav>
+        <p>titulo verde</p>
+    </div>
+
+    <p>nao e vermelho</p>
+    <span>vermelho</span>
+    <span>nao e vermelho</span>
+
+    <h4>nao e vermelho</h4>
+    <h5>vermelho</h5>
+    <h5>vermelho</h5>
+
+    <h6>cor violeta</h6>
+    <h6 id="remover">a cor nao e violeta</h6>
+
+    <a href="">Link pro site</a>
+
+    <button>Login</button>
+    <div id="transition"></div>
+    <div id="transformacao"></div>
+    <div id="rotate"></div>
+    <div id="scale"></div>
+    <div id="skew"></div>
+
+</body>
+</html>
