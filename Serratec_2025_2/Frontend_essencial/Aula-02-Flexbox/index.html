@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula - 02 Flexbox</title>
+</head>
+<style>
+    #divpai {
+        background-color: gray;
+        height: 200px;
+        gap: 20px;
+        display: flex;
+        align-items: center; /* Alinhamento vertical */
+        justify-content: center; /* Alinhamento horizontal */
+    }
+
+    #divpai2 {
+        margin-top: 20px;
+        background-color: gray;
+        height: 200px;
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Alinhamento horizontal */
+        justify-content: center; /* Alinhamento vertical */
+    }
+
+    #divpai3 {
+        margin-top: 20px;
+        background-color: gray;
+        height: 200px;
+        gap: 20px;
+        display: flex;
+        justify-content: sp;
+        align-items: center;
+    }
+</style>
+<body>
+    <div id="divpai">
+        <h1>Flex box 1</h1>
+        <h1>Flex box 2</h1>
+    </div>
+
+    <div id="divpai2">
+        <h1>Flex box 1</h1>
+        <h1>Flex box 2</h1>
+    </div>
+
+    <div id="divpai3">
+        <h1>Flex box</h1>
+    </div>
+
+</body>
+</html>
