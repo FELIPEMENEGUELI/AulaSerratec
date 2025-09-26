@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    div {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+    }
+    
+    #divvermelha {
+        background-color: red;
+        bottom: 0;
+        left: 0;
+    }
+
+    #divazul {
+        background-color: blue;
+        bottom: 0;
+        right: 0;
+    }
+
+    #divverde {
+        background-color: green;
+        right: 0;
+        top: 0;
+    }
+
+    #divamarelo {
+        background-color: yellow;
+        top: 0;
+        left: 0;
+    }
+
+    #divpreto {
+        background-color: black;
+        /* top: calc(50% - 25px); */
+        /* left: calc(50% - 25px); */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+</style>
+<body>
+    <div id="divvermelha"></div>
+    <div id="divazul"></div>
+    <div id="divverde"></div>
+    <div id="divamarelo"></div>
+    <div id="divpreto"></div>
+</body>
+</html>
+<!-- 
+1 - [X] Fazer 5 quadrados
+2 - [X] Colocar 4 quadrados nos 4 cantos da tela
+3 - Colocar 1 quadrado no centro da tela
+4 - [X] Todos os quadrados com o mesmo tamanho
+5 - [X] Cada quadrado com uma cor
+6 - [X] Todos o 4 quadrados, colados nos cantos 
+-->

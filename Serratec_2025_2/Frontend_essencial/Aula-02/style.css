@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: gray;
+  height: 200vh;
+}
+
+.classeh2 {
+  font-family: "Bitcount", system-ui;
+  color: #f00;
+  position: absolute;
+}
+
+#idh2 {
+  color: blue;
+}
+
+h2 {
+  color: green;
+}
+
+.classediv {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px 30px 50px 90px;
+  border-style: solid;
+  border-color: #000;
+  border-width: 2px;
+  position: absolute;
+}
+
+#iddivverde {
+  background-color: green;
+  width: 180px;
+}
+
+#iddivvermelho {
+  background-color: red;
+  border-radius: 10px;
+  border: 10px yellow solid;
+  margin-top: 20px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin: 15px 30px 50px 90px;
+  padding: 10px;
+  padding: 20px 10px 10px 15px;
+}
+
+span {
+  background-color: red;
+  padding: 40px;
+  border-radius: 100px;
+  position: fixed;
+}
