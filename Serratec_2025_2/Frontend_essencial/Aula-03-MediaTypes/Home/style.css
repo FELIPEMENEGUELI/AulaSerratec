@@ -1,0 +1,35 @@
+h1 {
+    color: red;
+}
+
+#container {
+    width: 290px;
+    border: 0.2px solid #ddd;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+#boxinfo {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#buttongo {
+    border-radius: 4px;
+    padding: 8px;
+    background-color: #0D6EFD;
+    color: #fff;
+    border: none;
+    width: 150px;
+}
+
+#buttongo:hover {
+    cursor: pointer;
+    background-color: rgb(51, 51, 227);
+}
+
+#fotofolha {
+    width: 100%;
+}
