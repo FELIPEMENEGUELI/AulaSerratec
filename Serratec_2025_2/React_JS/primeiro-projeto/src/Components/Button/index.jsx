@@ -8,6 +8,7 @@ export const ButtonComponent = ({batata}) => {
     //   {props.batata}
     //   {props.icone}
     // </button>
+    
     <button className={batatinha.text}>
       {batata ? batata : 'Clique aqui'}
     </button>
