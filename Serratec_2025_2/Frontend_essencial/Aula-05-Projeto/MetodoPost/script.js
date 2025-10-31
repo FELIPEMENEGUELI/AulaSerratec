@@ -8,6 +8,7 @@ function register(event) {
 
   if(!nome || !sobrenome || !genero || !trabalho) {
     alert("Preencha as informações")
+    return;
   }
 
   const data = {
@@ -19,7 +20,7 @@ function register(event) {
 
   const convertJson = JSON.stringify(data);
 
-  fetch(base_url, {
+  fetch(`${base_url}/users`, {
     method: 'POST',
     body: convertJson,
     headers: {
@@ -49,6 +50,7 @@ async function registerAssincrono(event) {
 
   if(!nome || !sobrenome || !genero || !trabalho) {
     alert("Preencha as informações")
+    return;
   }
 
   const data = {

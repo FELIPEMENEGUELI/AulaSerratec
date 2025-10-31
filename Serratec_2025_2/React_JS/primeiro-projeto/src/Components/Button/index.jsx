@@ -1,17 +1,15 @@
-import './style.css'
+import batatinha from './style.module.css'
 
 // function ButtonComponent(props) {
-function ButtonComponent({batata}) {
+export const ButtonComponent = ({batata}) => {
 
   return (
     // <button className='button'>
     //   {props.batata}
     //   {props.icone}
     // </button>
-    <button className='button'>
+    <button className={batatinha.text}>
       {batata ? batata : 'Clique aqui'}
     </button>
   )
 }
-
-export default ButtonComponent;

@@ -4,8 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Metodo PUT</title>
+    <script src="../globalScript.js"></script>
+    <script src="./script.js"></script>
 </head>
 <body>
-    <h1>Metodo PUT</h1>
+     <h1>Alterar cadastro</h1>
+
+    <form id="forms">
+      <fieldset name="nome">
+        <legend>Nome</legend>
+        <input 
+          type="text"
+          id="nome"
+          name="labelNome"
+          placeholder="Digite seu nome"
+          required
+        >
+      </fieldset>
+
+      <fieldset name="sobrenome">
+        <label for="sobrenome">Sobre nome</label>
+        <input 
+          type="text"
+          id="sobrenome"
+          name="sobrenome"
+          placeholder="Digite seu sobrenome"
+          required
+        >
+      </fieldset>
+
+      <fieldset name="genero">
+        <label for="genero">Sexo</label>
+        <input 
+          type="text"
+          id="genero"
+          name="genero"
+          placeholder="Digite seu sexo"
+          required
+        >
+      </fieldset>
+
+      <fieldset name="trabalho">
+        <label for="trabalho">Trabalho</label>
+        <input 
+          type="text"
+          id="trabalho"
+          name="trabalho"
+          placeholder="Digite o seu trabalho"
+          required
+        >
+      </fieldset>
+
+      <fieldset name="idUser">
+        <label for="idUser">Id do usuario</label>
+        <input 
+          type="text"
+          id="idUser"
+          name="idUser"
+          placeholder="Digite o seu id"
+          required
+        >
+      </fieldset>
+
+      <button onclick="changeUser(event)">Alterar cadastro</button>
+    </form>
 </body>
 </html>

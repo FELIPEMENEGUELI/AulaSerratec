@@ -3,9 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Metodo POST</title>
+    <title>Cadastro</title>
+    <script src="../globalScript.js"></script>
+    <script src="./script.js"></script>
 </head>
+<style>
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+</style>
 <body>
-    <h1>Metodo POST</h1>
+    <h1>Cadastro</h1>
+
+    <form id="forms">
+        <fieldset name="nome">
+          <legend>Nome</legend>
+          <input 
+            type="text"
+            id="nome"
+            name="labelNome"
+            placeholder="Digite seu nome"
+            required
+          >
+        </fieldset>
+
+        <fieldset name="sobrenome">
+          <label for="sobrenome">Sobre nome</label>
+          <input 
+            type="text"
+            id="sobrenome"
+            name="sobrenome"
+            placeholder="Digite seu sobrenome"
+            required
+          >
+        </fieldset>
+
+        <fieldset name="genero">
+          <label for="genero">Sexo</label>
+          <input 
+            type="text"
+            id="genero"
+            name="genero"
+            placeholder="Digite seu sexo"
+            required
+          >
+        </fieldset>
+
+        <fieldset name="trabalho">
+          <label for="trabalho">Trabalho</label>
+          <input 
+            type="text"
+            id="trabalho"
+            name="trabalho"
+            placeholder="Digite o seu trabalho"
+            required
+          >
+        </fieldset>
+
+        <button onclick="register(event)">Cadastrar</button>
+    </form>
 </body>
 </html>

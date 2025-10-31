@@ -1,10 +1,10 @@
-import ButtonComponent from "../../Components/Button";
+import { ButtonComponent } from "../../Components/Button";
 
-function Login() {
+function Login(){
 
   return (
     <div>
-      Pagina Login
+      Pagina Login alterada de novo
 
       <ButtonComponent batatas="Logar" />
     </div>

@@ -38,6 +38,11 @@ input {
     padding-left: 5px;
 } 
 
+a {
+    text-decoration: none;
+    text-align: center;
+}
+
 #buttonLogin {
     border-radius: 10px;
     background-color: black;

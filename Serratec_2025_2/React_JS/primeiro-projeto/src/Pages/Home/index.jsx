@@ -1,15 +1,13 @@
-import ButtonComponent from "../../Components/Button";
+import { ButtonComponent } from "../../Components/Button";
 import './style.css'
 
-function Home() {
+export function Home(){
 
   return (
-    <div>
-      Pagina Home
+    <div className="text">
 
+      Pagina Home
       <ButtonComponent />
     </div>
   )
 }
-
-export default Home;

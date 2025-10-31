@@ -9,6 +9,8 @@
     * {
         padding: 0;
         margin: 0;
+        --cor-vermelha: red;
+        /* background-image: url("./assets/foto.jpg"); */
     }
 
     div {
@@ -24,9 +26,10 @@
     }
 
     #divazul {
-        background-color: blue;
+        background-color: rgb(95, 95, 98);
         bottom: 0;
         right: 0;
+        background: linear-gradient(to top, red, yellow, blue, green);
     }
 
     #divverde {
@@ -48,6 +51,29 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        background-color: var(--cor-vermelha);
+        width: 100px;
+        box-shadow: 2px 2px 5px black;
+        border-radius: 5px;
+        background-color: #ff000090;
+        background-color: rgba(0, 0, 9, 0.7);
+        width: 20%;
+    }
+
+    span {
+        line-height: 3px; 
+        letter-spacing: 3px; 
+        word-spacing: 5px; 
+        text-indent: 30px; 
+        font-size: 32px;
+        font-size: 2em;
+    }
+
+    img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        opacity: 0.5;
     }
 
 </style>
@@ -56,13 +82,18 @@
     <div id="divazul"></div>
     <div id="divverde"></div>
     <div id="divamarelo"></div>
-    <div id="divpreto"></div>
+    <div id="divpreto">
+        <span>Texto 1</span>
+        <span>Texto 2</span>
+
+        <img src="./assets/foto.jpg" alt="Foto de uma planta">
+    </div>
 </body>
 </html>
 <!-- 
 1 - [X] Fazer 5 quadrados
 2 - [X] Colocar 4 quadrados nos 4 cantos da tela
-3 - Colocar 1 quadrado no centro da tela
+3 - [X] Colocar 1 quadrado no centro da tela
 4 - [X] Todos os quadrados com o mesmo tamanho
 5 - [X] Cada quadrado com uma cor
 6 - [X] Todos o 4 quadrados, colados nos cantos 
