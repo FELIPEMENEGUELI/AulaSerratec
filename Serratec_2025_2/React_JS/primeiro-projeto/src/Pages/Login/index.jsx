@@ -1,5 +1,5 @@
 import { ButtonComponent } from "../../Components/Button";
-import { InputGeneric } from "../../Components/Input";
+import { FilhoDaThais } from "../../Components/Input";
 
 function Login(){
 
@@ -7,12 +7,12 @@ function Login(){
     <div style={{display: 'flex', flexDirection: 'column', gap: '10px'}}>
       Pagina Login alterada de novo
 
-      <InputGeneric
+      <FilhoDaThais
         informacaoParaUsuario="Digite seu email"
         tipoDeInput="email"
       />
 
-      <InputGeneric 
+      <FilhoDaThais 
         informacaoParaUsuario="Digite sua senha"
         tipoDeInput="password"
       />

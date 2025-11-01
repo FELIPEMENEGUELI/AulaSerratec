@@ -2,27 +2,31 @@ import { FcAssistant, FcKey, FcCellPhone } from "react-icons/fc";
 import { GrLocation } from "react-icons/gr";
 import { HiCalendarDateRange } from "react-icons/hi2";
 import { MdOutlineDocumentScanner } from "react-icons/md";
+import { NetoDaThais } from "./style";
 
-export const InputGeneric = ({informacaoParaUsuario, tipoDeInput}) => {
+export const FilhoDaThais = (props) => {
+// export const FilhoDaThais = ({informacaoParaUsuario, tipoDeInput}) => {
 
   return (
     <div>
-      <input
-        placeholder={informacaoParaUsuario ? informacaoParaUsuario : "Digite algo..."}
-        type={tipoDeInput}
+      <NetoDaThais
+        // placeholder={props.informacaoParaUsuario ? props.informacaoParaUsuario : "Digite algo..."}
+        placeholder={props.informacaoParaUsuario}
+        type={props.tipoDeInput}
+        respeitoAsMulheres={false}
       />
 
-      {tipoDeInput === "password" && <FcKey />}
+      {props.tipoDeInput === "password" && <FcKey />}
 
-      {tipoDeInput === "email" && <FcAssistant />}
+      {props.tipoDeInput === "email" && <FcAssistant />}
 
-      {tipoDeInput === "date" && <HiCalendarDateRange />}
+      {props.tipoDeInput === "date" && <HiCalendarDateRange />}
       
-      {tipoDeInput === "cpf" && <MdOutlineDocumentScanner />}
+      {props.tipoDeInput === "cpf" && <MdOutlineDocumentScanner />}
       
-      {tipoDeInput === "telefone" && <FcCellPhone />}
+      {props.tipoDeInput === "telefone" && <FcCellPhone />}
       
-      {tipoDeInput === "endereco" && <GrLocation />}
+      {props.tipoDeInput === "endereco" && <GrLocation />}
 
     </div>
   )

@@ -1,35 +1,35 @@
 import { ButtonComponent } from "../../Components/Button";
 import './style.css'
-import { InputGeneric } from '../../Components/Input';
+import { FilhoDaThais } from '../../Components/Input';
 
-export function Home(){
+export function MaeThais(){
 
   return (
     <div style={{display: 'flex', flexDirection: 'column', gap: '10px'}}>
 
       Pagina Cadastro
 
-      <InputGeneric
+      <FilhoDaThais
         informacaoParaUsuario="Digite seu email"
         tipoDeInput="email"
       />
 
-      <InputGeneric
+      <FilhoDaThais
         informacaoParaUsuario="Digite seu cpf"
         tipoDeInput="cpf"
       />
 
-      <InputGeneric
+      <FilhoDaThais
         informacaoParaUsuario="Digite seu telefone"
         tipoDeInput="telefone"
       />
 
-      <InputGeneric
+      <FilhoDaThais
         informacaoParaUsuario="Digite seu endereco"
         tipoDeInput="endereco"
       />
 
-      <InputGeneric
+      <FilhoDaThais
         informacaoParaUsuario="Digite sua data de nascimento"
         tipoDeInput="date"
       />
