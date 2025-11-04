@@ -5,12 +5,14 @@ import { ComponenteDeEntrada } from './components/ComponenteDeEntrada/Componente
 import { ComponenteDeEntradaRecebendoFilho } from './components/ComponenteDeEntradaRecebendoFilho/ComponenteDeEntradaRecebendoFilho.jsx';
 import { ComponenteDeFoto } from './components/ComponenteDeFoto/ComponenteDeFoto.jsx';
 
-
 import { useState } from 'react'
 
 const App = () => {
 
   const [contando, setContando] = useState(0);
+  const [email, setEmail] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [tarefas, setTarefas] = useState([]);
 
   function funcaoParaSomar() {
     // setContando(contando + 1);
