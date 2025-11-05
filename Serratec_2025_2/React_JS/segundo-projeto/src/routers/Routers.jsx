@@ -1,6 +1,9 @@
-import { Route, Routes } from 'react-router'
+import { Route, Routes, BrowserRouter } from 'react-router'
 import { Home } from '../pages/Home/home.jsx';
 import { LoginSegundo } from '../pages/Login';
+import { About } from '../pages/About/index.jsx';
+import { Layout } from '../components/Layout/index.jsx';
+import { HomeV1 } from '../pages/HomeV1/index.jsx';
 
 const PageError = () => {
   return (
@@ -13,11 +16,35 @@ const PageError = () => {
 export const Routers = () => {
 
   return (
-    <Routes>
-      <Route path='/home' element={<Home />} />
-      <Route path='/login' element={<LoginSegundo />} />
+    <BrowserRouter>
+      <Routes>
+        <Route path='/login' element={<LoginSegundo />} />
 
-      <Route path='*' element={<PageError />} />
-    </Routes>
+        {/* Rota de layout, sem o path */}
+        <Route element={<Layout />}>
+          <Route path='/home' element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/homev1' element={<HomeV1 />} />
+        </Route>
+
+        {/* Rota Aninhada com o path
+        <Route>
+          <Route path='/dashboard' element={<Layout />}>
+            <Route path='home' element={<HomeAluno />} />
+            <Route path='about' element={<About />} />
+          </Route>
+        </Route>
+
+        Rota Aninhada com o path
+        <Route>
+          <Route path='/professor' element={<Layout />}>
+            <Route path='about' element={<About />} />
+            <Route path='home' element={<HomeProfessor />} />
+          </Route>
+        </Route> */}
+
+        <Route path='*' element={<PageError />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
