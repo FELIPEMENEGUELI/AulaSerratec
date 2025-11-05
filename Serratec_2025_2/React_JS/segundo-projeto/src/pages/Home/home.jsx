@@ -29,17 +29,17 @@ export const Home = () => {
       Bem vindo a Home
 
       <Input 
-        // funcaoVindaPorProps={setEmail}
-        placeholder={"Digite seu email..."}
-        typeComponent="email"
-        // value={email}
+        funcaoVindaPorProps={(e) => setNovasTarefas({ ...novasTarefas, titulo: e.target.value })}
+        placeholder={"Digite o titulo da tarefa..."}
+        typeComponent="text"
+        value={novasTarefas.titulo}
       />
 
       <Input
-        // funcaoVindaPorProps={setPassword}
-        placeholder={"Digite sua senha..."}
-        typeComponent="password"
-        // value={password}
+        funcaoVindaPorProps={(e) => setNovasTarefas({ ...novasTarefas, responsavel: e.target.value })}
+        placeholder={"Digite o responsavel da tarefa..."}
+        typeComponent="text"
+        value={novasTarefas.responsavel}
       />
       <button onClick={cadastrar}>Adicionar nova tarefa</button>
 

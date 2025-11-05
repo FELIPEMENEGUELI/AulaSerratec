@@ -7,7 +7,7 @@ export const Input = ({typeComponent, placeholder, value, funcaoVindaPorProps}) 
       placeholder={placeholder}
       required
       value={value}
-      onChange={(e) => funcaoVindaPorProps(e.target.value)}
+      onChange={funcaoVindaPorProps}
     />
   )
 }
