@@ -2,10 +2,17 @@ import React, { useEffect, useState } from 'react'
 import { Api } from '../../services/Api'
 import ImageDefault from '../../assets/default.png'
 import { CardContainer, Image, Name } from './style'
+import { ComponenteDeBotao } from '../../components/ComponenteDeBotao/ComponenteDeBotao.jsx'
+import { useAuth } from '../../hooks/AuthContext.jsx'
 
 export const HomeV1 = () => {
 
   const [bestasNaruto, setBestasNaruto] = useState([]);
+
+  const { sofredor, feliz, email } = useAuth();
+
+  console.log('Joao', sofredor)
+  console.log('Jessica', feliz)
   
   const carregarDadosApi = async () => {
 
@@ -33,7 +40,7 @@ export const HomeV1 = () => {
 
   return (
     <div>
-      Bem vindo a pagina do Naruto
+      Bem vinda, {email} a pagina do Naruto
 
       {bestasNaruto.map((bestaNaruto) => (
         <CardContainer key={bestaNaruto.id}>
@@ -41,6 +48,9 @@ export const HomeV1 = () => {
           <Name>Nome: {bestaNaruto.name}</Name>
         </CardContainer>
       ))}
+
+      <ComponenteDeBotao title={sofredor} />
+      <ComponenteDeBotao />
     </div>
   )
 }

@@ -4,6 +4,7 @@ import { LoginSegundo } from '../pages/Login';
 import { About } from '../pages/About/index.jsx';
 import { Layout } from '../components/Layout/index.jsx';
 import { HomeV1 } from '../pages/HomeV1/index.jsx';
+import { AuthProvider } from '../hooks/AuthContext.jsx';
 
 const PageError = () => {
   return (
@@ -17,34 +18,37 @@ export const Routers = () => {
 
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path='/login' element={<LoginSegundo />} />
+      <AuthProvider>
+        <Routes>
+          <Route path='/login' element={<LoginSegundo />} />
 
-        {/* Rota de layout, sem o path */}
-        <Route element={<Layout />}>
-          <Route path='/home' element={<Home />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/homev1' element={<HomeV1 />} />
-        </Route>
-
-        {/* Rota Aninhada com o path
-        <Route>
-          <Route path='/dashboard' element={<Layout />}>
-            <Route path='home' element={<HomeAluno />} />
-            <Route path='about' element={<About />} />
+          {/* Rota de layout, sem o path */}
+          <Route element={<Layout />}>
+            <Route path='/' element={<Home />} />
+            <Route path='/home' element={<Home />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/homev1' element={<HomeV1 />} />
           </Route>
-        </Route>
 
-        Rota Aninhada com o path
-        <Route>
-          <Route path='/professor' element={<Layout />}>
-            <Route path='about' element={<About />} />
-            <Route path='home' element={<HomeProfessor />} />
+          {/* Rota Aninhada com o path
+          <Route>
+            <Route path='/dashboard' element={<Layout />}>
+              <Route path='home' element={<HomeAluno />} />
+              <Route path='about' element={<About />} />
+            </Route>
           </Route>
-        </Route> */}
 
-        <Route path='*' element={<PageError />} />
-      </Routes>
+          Rota Aninhada com o path
+          <Route>
+            <Route path='/professor' element={<Layout />}>
+              <Route path='about' element={<About />} />
+              <Route path='home' element={<HomeProfessor />} />
+            </Route>
+          </Route> */}
+
+          <Route path='*' element={<PageError />} />
+        </Routes>
+      </AuthProvider>
     </BrowserRouter>
   )
 }
