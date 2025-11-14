@@ -1,4 +1,4 @@
-import { ImageBackground, View, ScrollView, FlatList, Text } from "react-native";
+import { ImageBackground, View, Text } from "react-native";
 import Banner from '../../../assets/banner.webp';
 import { Card } from "../../components/Card";
 import { styles } from "./style";
@@ -93,7 +93,7 @@ export const Home = () => {
             <Text style={{ fontSize: 50}}>Não existe alunos nessa turma!</Text>
           </View>
         ) : (
-          <Card />
+          <Card listaAlunos={listaAlunos} />
         )}
 
         <ButtonComponent
