@@ -1,12 +1,10 @@
-import { ImageBackground, View, ScrollView, FlatList, Text } from "react-native";
-import Banner from '../../../assets/banner.webp';
-import { Card } from "../../components/Card";
-import { styles } from "./style";
-import { ButtonComponent } from "../../components/Button";
+import { FlatList, Image, Text, View } from "react-native"
+import UserDefault from '../../../assets/default.png';
+import { styles } from "./style"
 
-export const Home = () => {
+export const Card = () => {
 
-  const listaAlunos = [
+    const listaAlunos = [
     {
       id: 1,
       nome: 'João',
@@ -79,30 +77,27 @@ export const Home = () => {
     },
   ];
 
-  function somar(numero1: number, numero2: number) {
-    const total: number = numero1 + numero2;
-    return total;
-  }
-
   return (
-    <View style={styles.container}>
-      <ImageBackground source={Banner} style={styles.background}>
+    <>
+      <FlatList
+        data={listaAlunos}
+        keyExtractor={(item) => String(item.id)}
+        renderItem={({ item }) => 
+          <View style={styles.card}>
+            <View>
+              <Text style={styles.title}>
+                Nome: {item.nome}
+              </Text>
 
-        {listaAlunos.length <= 0 ? (
-          <View style={{ backgroundColor: 'red', marginBottom: 20 }}>
-            <Text style={{ fontSize: 50}}>Não existe alunos nessa turma!</Text>
+              <Text style={styles.subTitle}>
+                Time: {item.time}
+              </Text>
+            </View>
+
+            <Image source={UserDefault} style={styles.image} alt="Banner de login" />
           </View>
-        ) : (
-          <Card />
-        )}
-
-        <ButtonComponent
-          title="Entrar" 
-          age={10}
-          backgroundColor="green"
-        />
-
-      </ImageBackground>
-    </View>
+        }
+      />
+    </>
   )
 }
