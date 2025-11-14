@@ -79,11 +79,6 @@ export const Home = () => {
     },
   ];
 
-  function somar(numero1: number, numero2: number) {
-    const total: number = numero1 + numero2;
-    return total;
-  }
-
   return (
     <View style={styles.container}>
       <ImageBackground source={Banner} style={styles.background}>
@@ -93,7 +88,9 @@ export const Home = () => {
             <Text style={{ fontSize: 50}}>Não existe alunos nessa turma!</Text>
           </View>
         ) : (
-          <Card listaAlunos={listaAlunos} />
+          <>
+            <Card listaAlunos={listaAlunos} />
+          </>
         )}
 
         <ButtonComponent

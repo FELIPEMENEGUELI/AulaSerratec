@@ -1,4 +1,5 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Dimensions } from "react-native";
+const { width } = Dimensions.get('window');
 
 export const styles = StyleSheet.create({
   title: {
@@ -22,6 +23,6 @@ export const styles = StyleSheet.create({
   },
 
   subTitle: {
-    fontSize: 20
+    fontSize: width < 767 ? 20 : 35
   }
 });
