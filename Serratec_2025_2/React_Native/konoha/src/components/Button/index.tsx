@@ -2,10 +2,10 @@ import { Alert, Text, TouchableOpacity } from "react-native";
 import { styles } from "./style";
 import { IPropsButton } from "./type";
 
-export const ButtonComponent = ({title, age, backgroundColor}: IPropsButton) => {
+export const ButtonComponent = ({title, age, backgroundColor, onChange}: IPropsButton) => {
 
   return (
-    <TouchableOpacity onPress={() => Alert.alert('Clicou')}
+    <TouchableOpacity onPress={onChange}
       style={[styles.button, 
         {
           backgroundColor: backgroundColor ? backgroundColor : 'orange',

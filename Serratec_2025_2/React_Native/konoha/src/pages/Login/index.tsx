@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { Button, Image, ImageBackground, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { Alert, Button, Image, ImageBackground, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import ImagemFundo from '../../../assets/banner.webp';
 import { batatinha } from './style';
 import { useNavigation } from '@react-navigation/native';
@@ -8,7 +8,7 @@ export function Login() {
 
   const navigation = useNavigation();
 
-  const login = () => {
+  const login = async () => {
     navigation.navigate("StackHome");
   }
 

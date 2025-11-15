@@ -2,18 +2,18 @@ import { Text, TouchableOpacity, View } from "react-native"
 import { styles } from "./style"
 import { useNavigation } from "@react-navigation/native";
 
-export const Settings = () => {
+export const Profile = () => {
 
   const navigation = useNavigation();
 
   return (
     <View style={styles.container}>
       <Text style={styles.title}>
-        Settings
+        Profile
       </Text>
 
-      <TouchableOpacity onPress={() => navigation.navigate("TabProfile")} style={styles.button}>
-        <Text style={styles.title}>Navegar para Profile</Text>
+      <TouchableOpacity onPress={() => navigation.navigate("TabContacts")} style={styles.button}>
+        <Text style={styles.title}>Navegar para contatos</Text>
       </TouchableOpacity>
     </View>
   )

@@ -3,8 +3,11 @@ import Banner from '../../../assets/banner.webp';
 import { Card } from "../../components/Card";
 import { styles } from "./style";
 import { ButtonComponent } from "../../components/Button";
+import { useNavigation } from "@react-navigation/native";
 
 export const Home = () => {
+
+  const navigation = useNavigation();
 
   const listaAlunos = [
     {
@@ -97,6 +100,7 @@ export const Home = () => {
           title="Entrar" 
           age={10}
           backgroundColor="green"
+          onChange={() => navigation.navigate("TabSettings")}
         />
 
       </ImageBackground>
