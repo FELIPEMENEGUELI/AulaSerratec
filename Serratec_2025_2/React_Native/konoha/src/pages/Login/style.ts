@@ -3,9 +3,6 @@ import { StyleSheet } from "react-native";
 export const batatinha = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 
   titulo: {
@@ -52,9 +49,8 @@ export const batatinha = StyleSheet.create({
   },
 
   imagem: {
-    height: 325,
-    width: '80%',
-    borderRadius: 8,
-    marginBottom: 10,
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
   }
 });

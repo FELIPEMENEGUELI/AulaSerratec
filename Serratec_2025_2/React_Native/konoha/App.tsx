@@ -1,14 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
-import { Login } from './src/pages/Login';
-import { Home } from './src/pages/Home';
+import { Routers } from './src/routers';
 
 export default function App() {
 
   return (
     <>
       <StatusBar style="auto" />
-      {/* <Login /> */}
-      <Home />
+      <Routers />
     </>
   );
 }

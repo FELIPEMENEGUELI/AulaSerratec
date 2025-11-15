@@ -1,9 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
-import { Button, Image, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { Button, Image, ImageBackground, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import ImagemFundo from '../../../assets/banner.webp';
 import { batatinha } from './style';
+import { useNavigation } from '@react-navigation/native';
 
 export function Login() {
+
+  const navigation = useNavigation();
+
+  const login = () => {
+    navigation.navigate("StackHome");
+  }
 
   return (
     <View style={batatinha.container}>
@@ -36,19 +43,18 @@ export function Login() {
         Sub titulo
       </Text> */}
 
-      <Image resizeMode='cover' style={batatinha.imagem} source={ImagemFundo} alt='' />
+      <ImageBackground resizeMode='cover' style={batatinha.imagem} source={ImagemFundo} alt=''>
+        <View style={batatinha.containerForms}>
 
-      <View style={batatinha.containerForms}>
+          <TextInput keyboardType='email-address' placeholderTextColor={'#fff'} style={batatinha.input} placeholder='Digite seu email' />
+          <TextInput secureTextEntry={true} placeholderTextColor={'#fff'} style={batatinha.input} placeholder='Digite sua senha' />
 
-        <TextInput keyboardType='email-address' placeholderTextColor={'#fff'} style={batatinha.input} placeholder='Digite seu email' />
-        <TextInput secureTextEntry={true} placeholderTextColor={'#fff'} style={batatinha.input} placeholder='Digite sua senha' />
+          <TouchableOpacity onPress={login} style={batatinha.button}>
+            <Text style={batatinha.titleButon}>Entrar</Text>
+          </TouchableOpacity>
 
-        <TouchableOpacity style={batatinha.button}>
-          <Text style={batatinha.titleButon}>Entrar</Text>
-        </TouchableOpacity>
-
-      </View>
-
+        </View>
+      </ImageBackground>
     </View>
   );
 }
