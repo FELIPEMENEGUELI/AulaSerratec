@@ -12,8 +12,8 @@ export const Profile = () => {
         Profile
       </Text>
 
-      <TouchableOpacity onPress={() => navigation.navigate("TabContacts")} style={styles.button}>
-        <Text style={styles.title}>Navegar para contatos</Text>
+      <TouchableOpacity onPress={() => navigation.navigate("StackSettings")} style={styles.button}>
+        <Text style={styles.title}>Navegar para configurações</Text>
       </TouchableOpacity>
     </View>
   )

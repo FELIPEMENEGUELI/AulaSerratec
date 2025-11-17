@@ -1,13 +1,12 @@
-import { ImageBackground, View, Text } from "react-native";
+import { ImageBackground, View, Text, Alert } from "react-native";
 import Banner from '../../../assets/banner.webp';
 import { Card } from "../../components/Card";
 import { styles } from "./style";
 import { ButtonComponent } from "../../components/Button";
-import { useNavigation } from "@react-navigation/native";
+import { Api } from "../../services/Api";
+import { useEffect } from "react";
 
 export const Home = () => {
-
-  const navigation = useNavigation();
 
   const listaAlunos = [
     {
@@ -82,6 +81,21 @@ export const Home = () => {
     },
   ];
 
+  const loadApiNaruto = async () => {
+    try {
+
+      const response = await Api.get('/akatsuki');
+      console.log('Verificando resposta', response.data.akatsuki);
+
+    } catch (error) {
+      Alert.alert('Erro ao carregar dados da API');
+    }
+  }
+
+  useEffect(() => {
+    loadApiNaruto();
+  }, [])
+
   return (
     <View style={styles.container}>
       <ImageBackground source={Banner} style={styles.background}>
@@ -100,7 +114,7 @@ export const Home = () => {
           title="Entrar" 
           age={10}
           backgroundColor="green"
-          onChange={() => navigation.navigate("TabSettings")}
+          onChange={() => null}
         />
 
       </ImageBackground>
