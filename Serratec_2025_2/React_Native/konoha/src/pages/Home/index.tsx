@@ -1,94 +1,30 @@
-import { ImageBackground, View, Text, Alert } from "react-native";
+import { ImageBackground, View, Text, Alert, ActivityIndicator } from "react-native";
 import Banner from '../../../assets/banner.webp';
 import { Card } from "../../components/Card";
-import { styles } from "./style";
-import { ButtonComponent } from "../../components/Button";
 import { Api } from "../../services/Api";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { styles } from "./style";
+import { IPropsResponseAPI } from "../../hooks/type";
 
 export const Home = () => {
 
-  const listaAlunos = [
-    {
-      id: 1,
-      nome: 'João',
-      time: 'Vascaino'
-    },
-    {
-      id: 2,
-      nome: 'Jessica',
-      time: 'Botafoguense'
-    },
-    {
-      id: 3,
-      nome: 'Hugo',
-      time: 'Fluminense'
-    },
-    {
-      id: 4,
-      nome: 'Hyago',
-      time: 'Flamenguista e feliz'
-    },
-    {
-      id: 5,
-      nome: 'Simone',
-      time: 'Fluminense'
-    },
-    {
-      id: 6,
-      nome: 'Lorrane',
-      time: 'Flamenguista'
-    },
-    {
-      id: 7,
-      nome: 'Thais',
-      time: 'Guanabara'
-    },
-    {
-      id: 8,
-      nome: 'Miguel',
-      time: 'Flamenguista'
-    },
-    {
-      id: 9,
-      nome: 'Rafael',
-      time: 'Sao Pedro FC'
-    },
-    {
-      id: 10,
-      nome: 'Miguel da Simone',
-      time: 'Fluminense'
-    },
-    {
-      id: 11,
-      nome: 'Ireni',
-      time: 'Palmeiras nao tem mundial'
-    },
-    {
-      id: 12,
-      nome: 'Giselle',
-      time: 'Fluminense'
-    },
-    {
-      id: 13,
-      nome: 'Cayan',
-      time: 'Vasco'
-    },
-    {
-      id: 14,
-      nome: 'Samuel',
-      time: 'Santista'
-    },
-  ];
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [dataNaruto, setDataNaruto] = useState<IPropsResponseAPI[]>([]);
 
   const loadApiNaruto = async () => {
+    setIsLoading(true);
     try {
 
       const response = await Api.get('/akatsuki');
-      console.log('Verificando resposta', response.data.akatsuki);
+      setDataNaruto(response.data.akatsuki)
 
     } catch (error) {
       Alert.alert('Erro ao carregar dados da API');
+
+    } finally {
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 1000);
     }
   }
 
@@ -100,22 +36,17 @@ export const Home = () => {
     <View style={styles.container}>
       <ImageBackground source={Banner} style={styles.background}>
 
-        {listaAlunos.length <= 0 ? (
-          <View style={{ backgroundColor: 'red', marginBottom: 20 }}>
-            <Text style={{ fontSize: 50}}>Não existe alunos nessa turma!</Text>
+        {isLoading ? (
+          <View style={styles.loadingApi}>
+            <ActivityIndicator size={'large'} color={'orange'} />
           </View>
+        ) : dataNaruto.length <= 0 && !isLoading ? (
+          <Text style={{ fontSize: 50}}>Nenhuma informação da Akatsuki encontrada!</Text>
         ) : (
-          <>
-            <Card listaAlunos={listaAlunos} />
-          </>
+          <View style={{ paddingHorizontal: 20, paddingVertical: 10 }}>
+            <Card listApi={dataNaruto} />
+          </View>
         )}
-
-        <ButtonComponent
-          title="Entrar" 
-          age={10}
-          backgroundColor="green"
-          onChange={() => null}
-        />
 
       </ImageBackground>
     </View>

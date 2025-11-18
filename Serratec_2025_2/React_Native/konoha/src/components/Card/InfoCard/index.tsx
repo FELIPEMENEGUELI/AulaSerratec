@@ -1,23 +1,24 @@
 import { Image, Text, View } from "react-native"
 import UserDefault from '../../../../assets/default.png';
-import { PropsInfoCard } from "../type";
 import { styles } from "./style"
+import { IPropsResponseAPI } from "../../../hooks/type";
 
-export const InfoCard = ({nome, time}: PropsInfoCard) => {
+export const InfoCard = ({name, debut, id, images}: IPropsResponseAPI) => {
 
   return (
-    <View style={styles.card}>
+    <View key={id} style={styles.card}>
+      <Image source={images ? {uri: images[0] } : UserDefault} style={styles.image} alt="Banner de login" />
+        
       <View>
         <Text style={styles.title}>
-          Nome: {nome}
+          Nome: {name}
         </Text>
 
         <Text style={styles.subTitle}>
-          Time: {time}
+          Estreia: 
+          {debut ? debut.anime : ' Informação não disponível'}
         </Text>
       </View>
-
-      <Image source={UserDefault} style={styles.image} alt="Banner de login" />
     </View>
   )
 }

@@ -8,6 +8,7 @@ export type DrawerList = {
   DrawerHome: undefined;
   DrawerProfile: undefined;
   DrawerSettings: undefined;
+  DrawerLoginInstagram: undefined;
 }
 
 export type TabList = {

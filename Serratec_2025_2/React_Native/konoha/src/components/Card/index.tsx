@@ -1,18 +1,20 @@
 import { FlatList } from "react-native"
 import { InfoCard } from "./InfoCard";
-import { IListProps } from "./type";
+import { IListProps } from "../../hooks/type";
 
-export const Card = ({listaAlunos}: IListProps) => {
+export const Card = ({listApi}: IListProps) => {
 
   return (
     <>
       <FlatList
-        data={listaAlunos}
+        data={listApi}
         keyExtractor={(item) => String(item.id)}
         renderItem={({ item }) => 
           <InfoCard 
-            nome={item.nome}
-            time={item.time}
+            name={item.name}
+            id={item.id}
+            images={item.images}
+            debut={item.debut}
           />
         }
       />

@@ -10,6 +10,13 @@ export const styles = StyleSheet.create({
     alignItems: 'center', 
     justifyContent: 'center',
     resizeMode:"cover",
-    paddingTop: Platform.OS === 'android' ? 50 : 60,
   },
+
+  loadingApi: {
+    flex: 1,
+    alignItems: 'center', 
+    justifyContent: 'center',
+    backgroundColor: '#00000090',
+    width: '100%',
+  }
 });
