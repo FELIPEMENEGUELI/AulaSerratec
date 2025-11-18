@@ -3,9 +3,6 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    gap: 50,
   },
 
   titleInsta: {
@@ -113,6 +110,14 @@ export const styles = StyleSheet.create({
     width: '100%',
     alignItems: 'center',
     paddingVertical: 15,
-    flex: 0.2,
+    marginTop: 30,
+    flex: 0.1,
+  },
+
+  wrapper: {
+    flex: 0.9,
+    justifyContent: 'center',
+    alignItems: 'center',
+    gap: 50,
   }
 });

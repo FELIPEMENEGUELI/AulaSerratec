@@ -6,7 +6,7 @@ import { styles } from './style';
 export const LoginInstagram = () => {
   return (
     <View style={styles.container}>
-      <>
+      <View style={styles.wrapper}>
         <Text style={styles.titleInsta}>Instagram</Text>
 
         <View style={styles.containerForms}>
@@ -46,7 +46,7 @@ export const LoginInstagram = () => {
             <Text style={styles.textForgot}>Logar com Facebook</Text>
           </TouchableOpacity> 
         </View>
-      </>
+      </View>
 
       <View style={styles.containerBottom}>
         <View style={styles.containerCreateAccount}>
