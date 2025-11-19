@@ -5,10 +5,12 @@ import { Api } from "../../services/Api";
 import { useEffect, useState } from "react";
 import { styles } from "./style";
 import { IPropsResponseAPI } from "../../hooks/type";
+import { useAuth } from "../../hooks/useAuth";
 
 export const Home = () => {
 
-  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const { setIsLoading, isLoading } = useAuth();
+
   const [dataNaruto, setDataNaruto] = useState<IPropsResponseAPI[]>([]);
 
   const loadApiNaruto = async () => {
@@ -24,7 +26,7 @@ export const Home = () => {
     } finally {
       setTimeout(() => {
         setIsLoading(false);
-      }, 1000);
+      }, 500);
     }
   }
 

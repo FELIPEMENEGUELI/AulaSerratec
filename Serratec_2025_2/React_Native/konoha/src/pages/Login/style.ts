@@ -36,7 +36,6 @@ export const batatinha = StyleSheet.create({
 
   button: {
     width: '100%',
-    backgroundColor: '#fff',
     borderRadius: 8,
     height: 50,
     justifyContent: 'center'
