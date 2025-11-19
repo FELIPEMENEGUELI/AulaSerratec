@@ -1,15 +1,15 @@
-import { Image, Text, View } from "react-native"
+import { Image, Text, TouchableOpacity, View } from "react-native"
 import UserDefault from '../../../../assets/default.png';
 import { styles } from "./style"
 import { IPropsResponseAPI } from "../../../hooks/type";
 import { useTheme } from "../../../hooks/useTheme";
 
-export const InfoCard = ({name, debut, id, images}: IPropsResponseAPI) => {
+export const InfoCard = ({name, debut, id, images, openCard}: IPropsResponseAPI) => {
 
   const {colors} = useTheme();
 
   return (
-    <View key={id} style={[styles.card, { backgroundColor: colors.background }]}>
+    <TouchableOpacity onPress={openCard} key={id} style={[styles.card, { backgroundColor: colors.background }]}>
       <Image source={images ? {uri: images[0] } : UserDefault} style={styles.image} alt="Banner de login" />
         
       <View>
@@ -22,6 +22,6 @@ export const InfoCard = ({name, debut, id, images}: IPropsResponseAPI) => {
           {debut ? debut.anime : ' Informação não disponível'}
         </Text>
       </View>
-    </View>
+    </TouchableOpacity>
   )
 }

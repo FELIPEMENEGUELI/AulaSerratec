@@ -1,4 +1,4 @@
-import { ActivityIndicator, Alert, ImageBackground, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { ActivityIndicator, Alert, ImageBackground, Keyboard, Text, TextInput, TouchableOpacity, TouchableWithoutFeedback, View } from 'react-native';
 import ImagemFundo from '../../../assets/banner.webp';
 import { batatinha } from './style';
 import { useNavigation } from '@react-navigation/native';
@@ -26,41 +26,43 @@ export function Login() {
 
   return (
     <View style={batatinha.container}>
-      <ImageBackground resizeMode='cover' style={batatinha.imagem} source={ImagemFundo} alt='Imagem de fundo'>
-        <View style={batatinha.containerForms}>
-          <>
-            <TextInput
-              keyboardType='email-address' 
-              placeholderTextColor={'#fff'} 
-              style={batatinha.input} 
-              placeholder='Digite seu email'
-              value={name}
-              onChangeText={setName}
-            />
+      <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+        <ImageBackground resizeMode='cover' style={batatinha.imagem} source={ImagemFundo} alt='Imagem de fundo'>
+          <View style={batatinha.containerForms}>
+            <>
+              <TextInput
+                keyboardType='email-address' 
+                placeholderTextColor={'#fff'} 
+                style={batatinha.input} 
+                placeholder='Digite seu email'
+                value={name}
+                onChangeText={setName}
+              />
 
-            <TextInput
-              secureTextEntry={true} 
-              placeholderTextColor={'#fff'} 
-              style={batatinha.input} 
-              placeholder='Digite sua senha'
-              value={password}
-              onChangeText={setPassword}
-            />
+              <TextInput
+                secureTextEntry={true} 
+                placeholderTextColor={'#fff'} 
+                style={batatinha.input} 
+                placeholder='Digite sua senha'
+                value={password}
+                onChangeText={setPassword}
+              />
 
-            <TouchableOpacity 
-              disabled={isLoading} 
-              onPress={login} 
-              style={[batatinha.button, { backgroundColor: isLoading ? '#999' : '#fff' }]}
-            >
-              {isLoading ? (
-                <ActivityIndicator size={'small'} color={'#fff'} />
-              ) : (
-                <Text style={batatinha.titleButon}>Entrar</Text>
-              )}
-            </TouchableOpacity>
-          </>
-        </View>
-      </ImageBackground>
+              <TouchableOpacity 
+                disabled={isLoading} 
+                onPress={login} 
+                style={[batatinha.button, { backgroundColor: isLoading ? '#999' : '#fff' }]}
+              >
+                {isLoading ? (
+                  <ActivityIndicator size={'small'} color={'#fff'} />
+                ) : (
+                  <Text style={batatinha.titleButon}>Entrar</Text>
+                )}
+              </TouchableOpacity>
+            </>
+          </View>
+        </ImageBackground>
+      </TouchableWithoutFeedback>
     </View>
   );
 }

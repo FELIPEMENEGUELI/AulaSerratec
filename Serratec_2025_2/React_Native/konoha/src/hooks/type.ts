@@ -3,8 +3,10 @@ export interface IPropsResponseAPI {
   id: number | string;
   name: string;
   images: string[];
+  openCard: () => void;
 }
 
 export interface IListProps {
-  listApi: IPropsResponseAPI[]
+  listApi: IPropsResponseAPI[];
+  openCard: (value: IPropsResponseAPI) => void;
 }

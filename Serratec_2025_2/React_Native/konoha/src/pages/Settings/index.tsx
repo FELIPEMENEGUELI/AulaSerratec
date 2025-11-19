@@ -1,10 +1,15 @@
 import { Text, TouchableOpacity, View } from "react-native"
-import { styles } from "./style"
 import { useNavigation } from "@react-navigation/native";
 import { useAuth } from "../../hooks/useAuth";
+import { StackList } from "../../@types/navigation";
+import { StackScreenProps } from "@react-navigation/stack";
+import { styles } from "./style"
 
-export const Settings = () => {
+type IPropsRoute = StackScreenProps<StackList, 'StackSettings'>;
 
+export const Settings = ({route}: IPropsRoute) => {
+
+  const nameRoute = route.params.nomeAula;
   const { name } = useAuth();
 
   if(!name) return;
@@ -14,6 +19,10 @@ export const Settings = () => {
     <View style={styles.container}>
       <Text style={styles.title}>
         {!name ? 'Usuário não logado' : `Bem vindo, ${name}`}
+      </Text>
+
+      <Text style={styles.title}>
+        Aula de {nameRoute}
       </Text>
 
       <Text style={styles.title}>

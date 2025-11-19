@@ -1,7 +1,7 @@
 export type StackList = {
   StackLogin: undefined;
   StackHome: { name: string };
-  StackSettings: undefined;
+  StackSettings: { nomeAula: string };
 }
 
 export type DrawerList = {

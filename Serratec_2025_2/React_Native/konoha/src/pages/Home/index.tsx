@@ -6,12 +6,15 @@ import { useEffect, useState } from "react";
 import { styles } from "./style";
 import { IPropsResponseAPI } from "../../hooks/type";
 import { useAuth } from "../../hooks/useAuth";
+import { ModalComponent } from "../../components/Modal";
 
 export const Home = () => {
 
   const { setIsLoading, isLoading } = useAuth();
 
   const [dataNaruto, setDataNaruto] = useState<IPropsResponseAPI[]>([]);
+  const [isOpenModal, setIsOpenModal] = useState<boolean>(false);
+  const [itemSelected, setItemSelected] = useState<IPropsResponseAPI | null>(null);
 
   const loadApiNaruto = async () => {
     setIsLoading(true);
@@ -30,6 +33,11 @@ export const Home = () => {
     }
   }
 
+  const openCard = (value: IPropsResponseAPI) => {
+    setItemSelected(value);
+    setIsOpenModal(true);
+  }
+
   useEffect(() => {
     loadApiNaruto();
   }, [])
@@ -46,8 +54,16 @@ export const Home = () => {
           <Text style={{ fontSize: 50}}>Nenhuma informação da Akatsuki encontrada!</Text>
         ) : (
           <View style={{ paddingHorizontal: 20, paddingVertical: 10 }}>
-            <Card listApi={dataNaruto} />
+            <Card listApi={dataNaruto} openCard={openCard} />
           </View>
+        )}
+
+        {isOpenModal && (
+          <ModalComponent 
+            isOpenModal={isOpenModal}
+            setIsOpenModal={setIsOpenModal}
+            itemSelected={itemSelected}
+          />
         )}
 
       </ImageBackground>

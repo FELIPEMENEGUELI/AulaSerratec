@@ -8,13 +8,21 @@ export const Profile = () => {
   const navigation = useNavigation();
   const { nome } = useAuth();
 
+  const aula = 'React Native';
+
+  const goToSettings = () => {
+    navigation.navigate("StackSettings", {
+      nomeAula: aula
+    })
+  }
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>
         Profile {nome}
       </Text>
 
-      <TouchableOpacity onPress={() => navigation.navigate("StackSettings")} style={styles.button}>
+      <TouchableOpacity onPress={goToSettings} style={styles.button}>
         <Text style={styles.title}>Navegar para configurações</Text>
       </TouchableOpacity>
     </View>
