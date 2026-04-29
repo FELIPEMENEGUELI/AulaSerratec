@@ -1,0 +1,139 @@
+/* :root {
+  --color-gray: #666060;
+}
+
+#containerCard {
+  border-radius: 4px;
+  border: 1px solid var(--color-gray);
+  box-shadow: 1px 1px 10px var(--color-gray);
+  width: 200px;
+  height: 300px;
+}
+
+#banner {
+  width: 100%;
+  height: 100px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  margin-top: -1px;
+}
+
+#containerInfo {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+#title {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#subTitle {
+  font-size: 14px;
+}
+
+#button {
+  margin-top: 10px;
+  background-color: #0C5ED7;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  height: 25px;
+  border: 1px solid var(--color-gray);
+  box-shadow: 1px 1px 10px var(--color-gray);
+}
+
+span {
+  background-color: #0C5ED7;
+  margin: 10px 0;
+  display: block;
+  width: 160px;
+  height: 50px;
+  display: block;
+} */
+
+/* display block */
+/* Aceita largura e altura */
+/* Não deixa alinhado as tags uma ao lado da outra */
+
+/* display inline */
+/* Não aceita largura e altura */
+/* Deixa alinhado as tags uma ao lado da outra */
+
+/* display inline-block */
+/* Aceita largura e altura */
+/* Deixa alinhado as tags uma ao lado da outra */
+
+/* div > span {
+  color: white;
+}
+
+#buttonHover {
+  background-color: red;
+  color: white;
+}
+
+#buttonHover:hover {
+  cursor: pointer;
+  background-color: green;
+} */
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#formulario {
+  width: 450px;
+  height: 450px;
+  border: 1px solid black;
+  box-shadow: 1px 1px 5px gray;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+img {
+  width: 100%;
+  height: 160px;
+}
+
+div {
+  padding: 20px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+#title {
+  font-size: 35px;
+}
+
+input {
+  width: 100%;
+  border-radius: 6px;
+  height: 30px;
+  border: 0.1px solid gray;
+  padding-left: 5px;
+  font-size: 18px;
+}
+
+#logar {
+  color: white;
+  background-color: #0C5ED7;
+  border-radius: 6px;
+  width: 70%;
+  border: none;
+  height: 40px;
+  font-size: 18px;
+  align-self: center;
+}

@@ -1,0 +1,125 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* Seletor de tag */
+h1 {
+  color: red;
+}
+
+/* Seletor de id */
+#title {
+  color: blue;
+}
+
+/* Seletor de classe */
+.subTitle {
+  color: green;
+}
+
+.containerPai {
+  width: 150px;
+  height: 150px;
+  background-color: black;
+  position: relative;
+}
+
+#containerFilho {
+  width: 50px;
+  height: 50px;
+  background-color: yellow;
+  position: absolute;
+  bottom: 0;
+}
+
+#containerFilho2 {
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  position: absolute;
+}
+
+div {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+}
+
+#div1 {
+  background-color: red;
+  top: 0;
+  right: 0;
+}
+
+#div2 {
+  background-color: green;
+  bottom: 0;
+  right: 0;
+}
+
+#div3 {
+  background-color: blue;
+  bottom: 0;
+  left: 0;
+}
+
+#div4 {
+  background-color: yellow;
+  /* top: calc(50% - 25px); */
+  /* left: calc(50% - 25px); */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#div5 {
+  background-color: pink;
+}
+
+#banner {
+  width: 150px;
+  height: 150px;
+  border: 5px dashed red;
+  border-radius: 50%;
+  opacity: 1;
+}
+
+#containerbotoes {
+  background-color: green;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  justify-content: space-evenly;
+  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+#logar {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  color: white;
+  border: 10px solid black;
+
+  @media(min-width: 768px) {
+    background-color: black;
+    border: 20px solid red;
+  }
+}
+
+#logar2 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  color: white;
+  border: 10px solid black;
+
+  @media(min-width: 768px) {
+    background-color: black;
+    border: 20px solid red;
+  }
+}
