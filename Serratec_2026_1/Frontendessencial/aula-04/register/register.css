@@ -1,0 +1,36 @@
+html {
+  font-size: 16px;
+  --color-gray: #ddd;
+  --color-black: #000;
+  --color-white: #fff;
+  height: 100vh;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+#containerForms {
+  background-color: var(--color-gray);
+  /* background: linear-gradient(135deg, red, yellow); */
+  border: 0.5px solid var(--color-black);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 10px;
+
+  @media(min-width: 768px) {
+    background-color: var(--color-white);
+    box-shadow: 2px 2px 5px var(--color-gray);
+    border-color: var(--color-gray);
+  }
+}
+
+#title {
+  align-self: center;
+  font-size: 2rem;
+}

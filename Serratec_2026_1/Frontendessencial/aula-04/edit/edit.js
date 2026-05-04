@@ -25,6 +25,7 @@ async function updateUser() {
       body: JSON.stringify(user)
     });
 
+    location.href = "../home/home.html";
     console.log('Editou com sucesso', response);
   }
 

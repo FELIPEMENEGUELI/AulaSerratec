@@ -1,0 +1,16 @@
+.card {
+  border: 1px solid black;
+  width: 250px;
+  margin-bottom: 5px;
+  border-radius: 6px;
+}
+
+.profile {
+  width: 250px;
+  height: 150px;
+}
+
+.text {
+  font-size: 10px;
+  padding-left: 10px;
+}
