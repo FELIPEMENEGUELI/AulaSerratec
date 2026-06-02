@@ -3,9 +3,10 @@ export const DadosDaAPI = [
     id: 1,
     selecao: 'Brasil',
     grupo: 'A',
-    tecnico: 'Ancelloti',
+    tecnico: 'Ancelotti',
     jogadores: ['Lucas Paqueta', 'Vinicius Jr.', 'Neymar', 'Gabriel Magalhães'],
     escudo: '🇧🇷',
+    cor: '#009c3b',
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ export const DadosDaAPI = [
     tecnico: 'Scaloni',
     jogadores: ['Messi', 'Otamendi', 'Flaco Lopez'],
     escudo: '🇦🇷',
+    cor: '#74acdf',
   },
   {
     id: 3,
@@ -22,7 +24,8 @@ export const DadosDaAPI = [
     tecnico: 'Deschamps',
     jogadores: ['Mbappe', 'Olise', 'Griezmann'],
     escudo: '🇫🇷',
-  }, 
+    cor: '#002395',
+  },
   {
     id: 4,
     selecao: 'Portugal',
@@ -30,5 +33,6 @@ export const DadosDaAPI = [
     tecnico: 'Santos',
     jogadores: ['Cristiano Ronaldo', 'Bruno Fernandes', 'João Félix'],
     escudo: '🇵🇹',
-  }
+    cor: '#006600',
+  },
 ]
