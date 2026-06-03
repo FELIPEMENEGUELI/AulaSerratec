@@ -9,7 +9,7 @@ export const Card = styled.div`
 `;
 
 export const Header = styled.div`
-  background-color: ${(props) => props.cor};
+  background-color: ${props => props.cor || ''};
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -65,4 +65,18 @@ export const Jogador = styled.li`
   &:last-child {
     border-bottom: none;
   }
+`;
+
+export const ButtonDefault = styled.button`
+  padding: 5px 20px;
+  height: 30px;
+  border-radius: 8px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+export const BotaoCard = styled(ButtonDefault)`
+  background-color: #007BFF;
 `;
