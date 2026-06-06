@@ -1,12 +1,11 @@
-import { Home } from "./pages/Home/index.jsx"
-import { Login } from "./pages/Login/index.jsx"
+import { ProvedorInformacoes } from "./contexts/useAuth.jsx"
 import { Routers } from "./routers/Router.jsx"
 
 function App() {
   return (
-    // <Home />
-    <Login />
-    // <Routers />
+    <ProvedorInformacoes>
+      <Routers />
+    </ProvedorInformacoes>
   )
 }
 
